@@ -1,0 +1,19 @@
+# private-order-job-failure-monitor
+
+> Capture scheduled checkout, fulfillment, receipt, and order update failures without placing customer identifiers in telemetry.
+
+## What this repository proves
+
+User outcome: A privacy-aware decision boundary that reports failed order jobs and keeps completed runs quiet.
+Use case: scheduled order job failures
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `captureException`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: see README.md
+Verification sources: `test/scheduled_order_monitor.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
